@@ -1,0 +1,37 @@
+body {
+    background-color: #ffeaee;
+}
+
+.brand-logo {
+    color: #b7ffcd !important;
+    text-shadow: 0 0 6px #b7ffcd !important;
+}
+
+.nav-wrapper ul a:hover {
+    color : #ffb7c5 !important;
+    background-color: #6b87ff;
+}
+
+.blog {
+    color: #b7ffcd !important;
+}
+
+.bloglink:hover > .blog{
+    color: #ffb7c5 !important;
+}
+
+.bloglink:hover {
+    background-color: #b7ffcd !important;
+}
+
+.nav-wrapper {
+    background-color: #ffb7c5 !important;
+}
+
+.nav-wrapper ul a {
+    color: #6b87ff !important;
+}
+
+.theme-text {
+    color: #6b87ff !important;
+}

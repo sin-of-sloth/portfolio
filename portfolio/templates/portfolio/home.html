@@ -1,0 +1,51 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block portfolio-url %}#!{% endblock %}
+{% block blog-url%}{% url 'blog:all_blogs' %}{% endblock %}
+
+{% block content %}
+
+    <div class="container" style="text-align: center;">
+        <img src="{% static 'portfolio/front.jpg' %}" style="width: 50%; height: auto;" class="z-depth-5">
+    </div>
+
+    <div class="container center-align">
+        <h3 class="quote">
+            “There is no struggle too vast, no odds too overwhelming, for even should we fail - should we fall - we will know that we have lived.”
+        </h3>
+        <h3 class="right speaker">- Anomander Rake</h3>
+    </div>
+    <br><br><br><br>
+
+    <div class="container left-align">
+        <h3>PROJECTS</h3>
+        <hr>
+    </div>
+
+    <div class="container-fluid projects">
+        <div class="row">
+            {% for project in projects %}
+                    <div class="col s3">
+                        <div class="card transparent z-depth-3">
+                            <div class="card-image">
+                                <img src="{{ project.image.url }}">
+                                <span class="card-title">{{ project.title }}</span>
+                            </div>
+                            <div class="card-content">
+                                <p>{{ project.description }}</p>
+                            </div>
+                            <div class="card-action">
+                                {% if project.url %}
+                                <br><a href="{{ project.url }}" target="_blank">Link</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

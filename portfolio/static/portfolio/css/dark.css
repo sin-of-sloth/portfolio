@@ -1,0 +1,38 @@
+body {
+    background-color: #1a1926;
+    color: #ffffff;
+}
+
+.brand-logo {
+    color: #ff822f !important;
+    text-shadow: 0 0 6px #ff822f !important;
+}
+
+.nav-wrapper ul a:hover {
+    color : #292558;
+    background-color: #adff2f;
+}
+
+.blog {
+    color: #ff822f !important;
+}
+
+.bloglink:hover > .blog{
+    color: #292558 !important;
+}
+
+.bloglink:hover {
+    background-color: #ff822f !important;
+}
+
+.nav-wrapper {
+    background-color: #292558 !important;
+}
+
+.nav-wrapper ul a {
+    color: #adff2f;
+}
+
+.theme-text {
+    color: #adff2f !important;
+}

@@ -1,0 +1,24 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block portfolio-url %}{% url 'home' %}{% endblock %}
+{% block blog-urlf%}#!{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>BLOGS</h1>
+
+        <h2>sin-of-sloth has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
+
+        {% for blog in blogs %}
+
+        <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+        <h5>{{ blog.date|date:'F j, Y' }}</h5>
+        <p>{{ blog.description|striptags|truncatechars:90 }}</p>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}

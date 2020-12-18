@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Montserrat&display=swap');
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('../fonts/GreatVibes-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Conspiracy';
+    src: url('../fonts/CONSPIRA.TTF') format("truetype");
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+.projects {
+    padding: 0 50px 0 50px;
+}
+
+.quote {
+    font-family: 'Conspiracy';
+}
+
+.speaker {
+    font-family: 'GreatVibes';
+}
+
+.brand-logo {
+    font-family: 'Special Elite' !important;
+    font-size: 40px !important;
+}
+
+.navbar-logo {
+    width: 30px !important;
+    height: auto !important;
+    vertical-align: middle !important;
+    background-color: white !important;
+}
+
+.nav-wrapper ul li a i {
+    font-size: 35px !important;
+}
+
+.card-image {
+    height: 300px;
+    overflow: hidden;
+}

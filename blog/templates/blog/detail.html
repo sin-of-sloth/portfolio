@@ -1,0 +1,24 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block portfolio-url %}{% url 'home' %}{% endblock %}
+{% block blog-url%}{% url 'blog:all_blogs' %}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1 class="center">{{ blog.title }}</h1>
+        <h5 class="center">{{ blog.date|date:'F j, Y' }}</h5>
+    </div>
+    <div class="row">
+        <p class="{% if blog.poem %}
+                    center
+                    {% endif %}">
+            {{ blog.description|safe }}
+        </p>
+    </div>
+</div>
+
+{%endblock%}
