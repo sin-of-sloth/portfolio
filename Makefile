@@ -13,14 +13,17 @@ BOLD := $(shell tput bold)
 .PHONY: server
 server:
 	bash -c 'python3 manage.py runserver'
+	@:
 
 .PHONY: migrate
 migrate:
 	bash -c 'python3 manage.py makemigrations && python3 manage.py migrate'
+	@:
 
 .PHONY: superuser
 superuser:
 	bash -c 'python3 manage.py createsuperuser'
+	@:
 
 .PHONY: admin
 admin:
@@ -30,6 +33,10 @@ admin:
 	@echo ''
 	@:
 
+.PHONY: static
+static:
+	python3 manage.py collectstatic
+
 .PHONY: help
 help:
 	@echo ''
@@ -38,5 +45,6 @@ help:
 	@echo '$(RED)migrate:$(RESET) run makemigrations and migrate'
 	@echo '$(RED)superuser:$(RESET) create a django admin (superuser)'
 	@echo '$(RED)admin:$(RESET) display $(BOLD)$(RED)my$(RESET) admin username and password'
+	@echo '$(RED)static:$(RESET) collect static files to root $(RED)(do not run on local! bad!)$(RESET)'
 	@echo ''
 	@:
