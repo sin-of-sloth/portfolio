@@ -37,6 +37,28 @@ admin:
 static:
 	python3 manage.py collectstatic
 
+.PHONY: push
+push:
+	@echo ''
+	@echo '$(BLUE)$(BOLD)Commands to run to push to git$(RESET)'
+	@echo 'pip3 freeze > requirements.txt'
+	@echo 'git add .'
+	@echo 'git commit -m "<your message here>"'
+	@echo 'git push origin'
+	@echo ''
+	@:
+
+.PHONY: pull
+pull:
+	@echo ''
+	@echo '$(BLUE)$(BOLD)Commands to run to pull from git to production$(RESET)'
+	@echo 'git pull origin'
+	@echo 'pip install -r requirements.txt'
+	@echo 'python manage.py migrate'
+	@echo 'make static'
+	@echo ''
+	@:
+
 .PHONY: help
 help:
 	@echo ''
@@ -46,5 +68,7 @@ help:
 	@echo '$(RED)superuser:$(RESET) create a django admin (superuser)'
 	@echo '$(RED)admin:$(RESET) display $(BOLD)$(RED)my$(RESET) admin username and password'
 	@echo '$(RED)static:$(RESET) collect static files to root $(RED)(do not run on local! bad!)$(RESET)'
+	@echo '$(RED)push:$(RESET) commands to run to push to git'
+	@echo '$(RED)pull:$(RESET) commands to run to pull from git to production'
 	@echo ''
 	@:
