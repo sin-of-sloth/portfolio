@@ -6,12 +6,24 @@
 }
 
 @font-face {
+    font-family: 'UbuntuTitle';
+    src: url('../fonts/Ubuntu-Title.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'RemachineScript';
+    src: url('../fonts/RemachineScript.ttf') format("truetype");
+}
+
+@font-face {
     font-family: 'Conspiracy';
     src: url('../fonts/CONSPIRA.TTF') format("truetype");
 }
 
 body {
     font-family: 'Montserrat';
+    position: relative !important;
+    z-index: 2;
 }
 
 .projects {
@@ -31,6 +43,15 @@ body {
     font-size: 40px !important;
 }
 
+.ubuntu-font {
+    font-family: 'UbuntuTitle';
+}
+
+.remachine-font {
+    font-family: 'RemachineScript';
+    font-size: 100px !important;
+}
+
 .navbar-logo {
     width: 30px !important;
     height: auto !important;
@@ -45,4 +66,39 @@ body {
 .card-image {
     height: 300px;
     overflow: hidden;
+}
+
+.collapsible-header {
+    border-bottom: 0 !important;
+    font-size: xx-large !important;
+}
+
+.collapsible-body {
+    border-bottom: 0 !important;
+}
+
+.collapsible-header {
+    justify-content: space-between;
+}
+
+.collapsible li.active .expand {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.rotate {
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+.date {
+    font-family: 'UbuntuTitle';
+    font-size: large;
+    color: #808080;
+}
+
+.content {
+    z-index: 2 !important;
 }

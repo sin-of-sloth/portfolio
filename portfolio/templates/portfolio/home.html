@@ -7,6 +7,8 @@
 
 {% block content %}
 
+    <br><br>
+
     <div class="container" style="text-align: center;">
         <img src="{% static 'portfolio/front.jpg' %}" style="width: 50%; height: auto;" class="z-depth-5">
     </div>
@@ -17,18 +19,19 @@
         </h3>
         <h3 class="right speaker">- Anomander Rake</h3>
     </div>
-    <br><br><br><br>
+    <br><br><br>
 
     <div class="container left-align">
-        <h3>PROJECTS</h3>
+        <h1 class="remachine-font">Projects by sin-of-sloth</h1>
         <hr>
+        <br>
     </div>
 
     <div class="container-fluid projects">
         <div class="row">
             {% for project in projects %}
                     <div class="col s3">
-                        <div class="card transparent z-depth-3">
+                        <div class="card z-depth-3">
                             <div class="card-image">
                                 <img src="{{ project.image.url }}">
                                 <span class="card-title">{{ project.title }}</span>
@@ -38,7 +41,7 @@
                             </div>
                             <div class="card-action">
                                 {% if project.url %}
-                                <br><a href="{{ project.url }}" target="_blank">Link</a>
+                                <br><a href="{{ project.url }}" target="_blank" class="card-link"><i class="material-icons left">launch</i>Go To Project</a>
                                 {% endif %}
                             </div>
                         </div>

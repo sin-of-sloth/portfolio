@@ -8,6 +8,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'portfolio/logo.ico' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/dark.css' %}" id="theme" class="dark">
     <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/cherry-blossom.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/stars.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/materialize.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -49,31 +51,30 @@
                 <a href="{% block portfolio-url %}{% endblock %}" class="brand-logo center">Portfolio</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down valign-wrapper">
                     <li><a href="https://github.com/sin-of-sloth" target="_blank">Github&emsp;<img src="{% static 'portfolio/github.png' %}" alt="" class="circle navbar-logo"></a></li>
+                    <li><a href="https://github.com/sin-of-sloth" target="_blank">LinkedIn&emsp;<img src="{% static 'portfolio/linkedin.png' %}" alt="" class="circle navbar-logo"></a></li>
                     <li><a href="{% static 'portfolio/resume.pdf' %}" target="_blank">Resume</a></li>
                     <li><a href="{% block blog-url %}{% endblock %}" class="bloglink"><span class="blog">Blog<i class="material-icons right medium">history_edu</i></span></a></li>
                     <li>&emsp;</li>
                 </ul>
             </div>
         </nav>
+    </div>   
+    
+    <div id="blossom_container">
     </div>
-    <br><br>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
 
-    {% block content %}{% endblock %}
+</div>
 
+    <script src="{% static 'portfolio/js/materialize.js' %}"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="{% static 'portfolio/js/portfolio.js' %}"></script>
+    <script src="{% static 'portfolio/js/cherry-blossoms.js' %}"></script>
     <script>
-        function toggler() {
-            if (document.getElementById('theme').className == "dark") {
-                document.getElementById('theme').href = "{% static 'portfolio/css/light.css' %}";
-                document.getElementById('theme').className = "light";
-            } else {
-                document.getElementById('theme').href = "{% static 'portfolio/css/dark.css' %}";
-                document.getElementById('theme').className = "dark";
-            }
-        }
-
-        window.addEventListener('load', function () {
-            document.getElementById('theme-toggle').checked = true;
-        })
+        var light_theme = "{% static 'portfolio/css/light.css' %}";
+        var dark_theme = "{% static 'portfolio/css/dark.css' %}"
     </script>
 
 </body>

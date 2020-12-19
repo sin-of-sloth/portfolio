@@ -36,3 +36,27 @@ body {
 .theme-text {
     color: #adff2f !important;
 }
+
+.collapsible-header {
+    background-color: #292558 !important;
+}
+
+.more-button {
+    background-color: #1a1926 !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: #adff2f !important;
+    color: #adff2f !important;
+}
+
+.more-button:hover {
+    background-color: #292558 !important;
+}
+
+.card-link {
+    color: #adff2f !important;
+}
+
+.card {
+    background-color: #292558 !important;
+}

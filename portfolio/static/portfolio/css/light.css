@@ -1,5 +1,6 @@
 body {
     background-color: #ffeaee;
+    color: #000000;
 }
 
 .brand-logo {
@@ -34,4 +35,28 @@ body {
 
 .theme-text {
     color: #6b87ff !important;
+}
+
+.collapsible-header {
+    background-color: #ffb7c5 !important;
+}
+
+.more-button {
+    background-color: #ffeaee !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: #6b87ff !important;
+    color: #6b87ff !important;
+}
+
+.more-button:hover {
+    background-color: #ffb7c5 !important;
+}
+
+.card-link {
+    color: #6b87ff !important;
+}
+
+.card {
+    background-color: transparent !important;
 }
