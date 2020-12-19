@@ -1,7 +1,6 @@
 window.addEventListener('load', function () {
-    document.getElementById('theme-toggle').checked = false;
     if(document.getElementById('theme').className == 'dark') {
-        document.getElementById('blossom_container').style.display = 'block';
+        document.getElementById('blossom_container').style.visibility = 'visible';
     }
 
     for (var i = 0; i < 300; i++) {
@@ -9,21 +8,21 @@ window.addEventListener('load', function () {
         $('body').append(star);
     }
 
-    var theme_cookie = getCookie('theme');
-    if(theme_cookie == null) {
-        document.cookie = "theme=dark;"
-        theme_cookie = "dark";
-    }
+    // var theme_cookie = getCookie('theme');
+    // if(theme_cookie == null) {
+    //     document.cookie = "theme=dark;"
+    //     theme_cookie = "dark";
+    // }
 
-    if(theme_cookie == "dark") {
-        document.getElementById('theme').href = dark_theme;
-        document.getElementById('theme').className = "dark";
-        document.getElementById('blossom_container').style.visibility = 'hidden';   
-    } else {
-        document.getElementById('theme').href = light_theme;
-        document.getElementById('theme').className = "light";
-        document.getElementById('blossom_container').style.visibility = 'visible';   
-    }
+    // if(theme_cookie == "dark") {
+    //     document.getElementById('theme').href = dark_theme;
+    //     document.getElementById('theme').className = "dark";
+    //     document.getElementById('blossom_container').style.visibility = 'hidden';   
+    // } else {
+    //     document.getElementById('theme').href = light_theme;
+    //     document.getElementById('theme').className = "light";
+    //     document.getElementById('blossom_container').style.visibility = 'visible';   
+    // }
 
 })
 

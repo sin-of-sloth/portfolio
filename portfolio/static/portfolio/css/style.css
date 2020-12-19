@@ -102,3 +102,20 @@ body {
 .content {
     z-index: 2 !important;
 }
+
+.switch label input[type="checkbox"]:checked + .lever:after {
+    background-image: url("../dark.png");
+    background-size: cover;
+    background-color: #000000;
+}
+.switch label input[type="checkbox"]:checked + .lever {
+    background-color: #000000 !important;
+}
+.switch label input[type="checkbox"]:not(:checked) + .lever:after {
+    background-image: url("../light.png");
+    background-size: cover;
+    background-color: yellow;
+}
+.switch label input[type="checkbox"]:not(:checked) + .lever {
+    background-color: lightblue;
+}

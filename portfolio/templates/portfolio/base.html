@@ -6,31 +6,12 @@
     {% load static %}
 
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'portfolio/logo.ico' %}">
-    <link rel="stylesheet" href="{% static 'portfolio/css/dark.css' %}" id="theme" class="dark">
+    <link rel="stylesheet" href="{% static 'portfolio/css/light.css' %}" id="theme" class="light">
     <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/cherry-blossom.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/stars.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/materialize.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <style>
-        .switch label input[type="checkbox"]:checked + .lever:after {
-            background-image: url("{% static 'portfolio/dark.png' %}");
-            background-size: cover;
-            background-color: #000000;
-        }
-        .switch label input[type="checkbox"]:checked + .lever {
-            background-color: #000000;
-        }
-        .switch label input[type="checkbox"]:not(:checked) + .lever:after {
-            background-image: url("{% static 'portfolio/light.png' %}");
-            background-size: cover;
-            background-color: yellow;
-        }
-        .switch label input[type="checkbox"]:not(:checked) + .lever {
-            background-color: lightblue;
-        }
-    </style>
 
     <title>Portfolio</title>
 </head>
@@ -42,7 +23,7 @@
                     <div class="switch">
                         <label>
                             <span class="theme-text">&emsp;Light</span>
-                            <input type="checkbox" id="theme-toggle" onclick="toggler()"></input>
+                            <input type="checkbox" id="theme-toggle" onclick="toggler()">
                             <span class="lever"></span>
                             <span class="theme-text">Dark</span>
                         </label>
@@ -60,8 +41,7 @@
         </nav>
     </div>   
     
-    <div id="blossom_container">
-    </div>
+    <div id="blossom_container"></div>
     <div class="content">
         {% block content %}{% endblock %}
     </div>
