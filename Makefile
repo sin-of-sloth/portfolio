@@ -26,7 +26,7 @@ superuser:
 admin:
 	@echo ''
 	@echo '$(RED)username: $(GREEN)admin'
-	@echo '$(RED)password: $(GREEN)cyberpunk'
+	@echo '$(RED)password: $(GREEN)thedarklord password'
 	@echo ''
 	@:
 
@@ -37,6 +37,6 @@ help:
 	@echo '$(RED)server:$(RESET) run the django server'
 	@echo '$(RED)migrate:$(RESET) run makemigrations and migrate'
 	@echo '$(RED)superuser:$(RESET) create a django admin (superuser)'
-	@echo '$(RED)users:$(RESET) display $(BOLD)$(RED)my$(RESET) admin username and password'
+	@echo '$(RED)admin:$(RESET) display $(BOLD)$(RED)my$(RESET) admin username and password'
 	@echo ''
 	@:
