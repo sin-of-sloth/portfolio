@@ -52,6 +52,7 @@ push:
 pull:
 	@echo ''
 	@echo '$(BLUE)$(BOLD)Commands to run to pull from git to production$(RESET)'
+	@echo 'workon <environment>'
 	@echo 'git pull origin'
 	@echo 'pip install -r requirements.txt'
 	@echo 'python manage.py migrate'
