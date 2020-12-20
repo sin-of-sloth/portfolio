@@ -118,14 +118,11 @@ body {
 .collapsible-header {
     border-bottom: 0 !important;
     font-size: xx-large !important;
+    justify-content: space-between;
 }
 
 .collapsible-body {
     border-bottom: 0 !important;
-}
-
-.collapsible-header {
-    justify-content: space-between;
 }
 
 .collapsible li.active .expand {
@@ -165,4 +162,10 @@ body {
 }
 .switch label input[type="checkbox"]:not(:checked) + .lever {
     background-color: lightblue;
+}
+
+.back-button {
+    padding-top: 25px !important;
+    padding-left: 25px !important;
+    position: fixed !important;
 }

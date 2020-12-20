@@ -17,7 +17,14 @@
 
             <li>
                 <div class="collapsible-header">
-                    <h6>{{ blog.title }}</h6>
+                    <h6>
+                        {% if blog.poem %}
+                            <i class="material-icons left poem-prose">history_edu</i>
+                        {% else %}
+                            <i class="material-icons left poem-prose">receipt_long</i>
+                        {% endif %}
+                        {{ blog.title }}
+                    </h6>
                     <i class="material-icons rotate right expand">expand_more</i>
                 </div>
                     <div class="collapsible-body">

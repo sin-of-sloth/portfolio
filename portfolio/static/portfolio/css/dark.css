@@ -60,3 +60,11 @@ body {
 .card-title {
     color: #ff822f !important;
 }
+
+.back-button {
+    color: #adff2f !important;
+}
+
+.back-button:hover {
+    color: #d2eea8 !important;
+}
