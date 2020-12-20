@@ -6,12 +6,15 @@
     {% load static %}
 
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'portfolio/logo.ico' %}">
-    <link rel="stylesheet" href="{% static 'portfolio/css/light.css' %}" id="theme" class="light">
+    {% ifequal request.COOKIES.theme "dark" %}
+        <link rel="stylesheet" href="{% static 'portfolio/css/dark.css' %}" id="theme" class="dark">
+    {% else %}
+        <link rel="stylesheet" href="{% static 'portfolio/css/light.css' %}" id="theme" class="light">
+    {% endifequal %}
     <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/cherry-blossom.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/stars.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/materialize.css' %}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title>Portfolio</title>
 </head>
@@ -19,29 +22,36 @@
     <div class="navbar-fixed">
         <nav class="z-depth-3">
             <div class="nav-wrapper">
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <ul id="nav-mobile" class="left">
                     <div class="switch">
                         <label>
-                            <span class="theme-text">&emsp;Light</span>
-                            <input type="checkbox" id="theme-toggle" onclick="toggler()">
+                            <span class="theme-text ubuntu-font">&emsp;Light</span>
+                            {% ifequal request.COOKIES.theme "dark" %}
+                                <input type="checkbox" id="theme-toggle" onclick="toggler()" checked>
+                            {% else %}
+                                <input type="checkbox" id="theme-toggle" onclick="toggler()" unchecked>
+                            {% endifequal %}
                             <span class="lever"></span>
-                            <span class="theme-text">Dark</span>
+                            <span class="theme-text ubuntu-font">Dark</span>
                         </label>
                       </div>
                 </ul>
                 <a href="{% block portfolio-url %}{% endblock %}" class="brand-logo center">Portfolio</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down valign-wrapper">
                     <li><a href="https://github.com/sin-of-sloth" target="_blank">Github&emsp;<img src="{% static 'portfolio/github.png' %}" alt="" class="circle navbar-logo"></a></li>
-                    <li><a href="https://github.com/sin-of-sloth" target="_blank">LinkedIn&emsp;<img src="{% static 'portfolio/linkedin.png' %}" alt="" class="circle navbar-logo"></a></li>
+                    <li><a href="https://www.linkedin.com/in/arjunlal0709" target="_blank">LinkedIn&emsp;<img src="{% static 'portfolio/linkedin.png' %}" alt="" class="circle navbar-logo"></a></li>
                     <li><a href="{% static 'portfolio/resume.pdf' %}" target="_blank">Resume</a></li>
                     <li><a href="{% block blog-url %}{% endblock %}" class="bloglink"><span class="blog">Blog<i class="material-icons right medium">history_edu</i></span></a></li>
-                    <li>&emsp;</li>
                 </ul>
             </div>
         </nav>
     </div>   
     
-    <div id="blossom_container"></div>
+    {% ifequal request.COOKIES.theme "dark" %}
+    <div id="blossom_container" style="visibility: hidden;"></div>
+    {% else %}
+        <div id="blossom_container"></div>
+    {% endifequal %}
     <div class="content">
         {% block content %}{% endblock %}
     </div>
@@ -49,7 +59,7 @@
 </div>
 
     <script src="{% static 'portfolio/js/materialize.js' %}"></script>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="{% static 'portfolio/js/jquery-3.5.1.min.js' %}"></script>
     <script src="{% static 'portfolio/js/portfolio.js' %}"></script>
     <script src="{% static 'portfolio/js/cherry-blossoms.js' %}"></script>
     <script>

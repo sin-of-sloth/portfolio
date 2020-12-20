@@ -4,8 +4,8 @@ body {
 }
 
 .brand-logo {
-    color: #b7ffcd !important;
-    text-shadow: 0 0 6px #b7ffcd !important;
+    color: #2f9721 !important;
+    text-shadow: 0 0 6px #2f9721 !important;
 }
 
 .nav-wrapper ul a:hover {
@@ -14,7 +14,7 @@ body {
 }
 
 .blog {
-    color: #b7ffcd !important;
+    color: #2f9721 !important;
 }
 
 .bloglink:hover > .blog{
@@ -22,7 +22,7 @@ body {
 }
 
 .bloglink:hover {
-    background-color: #b7ffcd !important;
+    background-color: #2f9721 !important;
 }
 
 .nav-wrapper {
@@ -55,4 +55,8 @@ body {
 
 .card-link {
     color: #6b87ff !important;
+}
+
+.card-title {
+    color: #2f9721 !important;
 }
