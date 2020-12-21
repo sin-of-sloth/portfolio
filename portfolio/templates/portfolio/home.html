@@ -40,11 +40,11 @@
                                 <hr class="theme-text">
                                 <p>{{ project.description }}</p>
                             </div>
-                            <div class="card-action">
-                                {% if project.url %}
+                            {% if project.url %}
+                            <div class="card-action valign-wrapper">
                                 <br><a href="{{ project.url }}" target="_blank" class="card-link"><i class="material-icons left">launch</i>Go To Project</a>
-                                {% endif %}
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 

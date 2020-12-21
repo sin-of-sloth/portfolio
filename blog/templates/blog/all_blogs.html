@@ -28,7 +28,7 @@
                     <i class="material-icons rotate right expand">expand_more</i>
                 </div>
                     <div class="collapsible-body">
-                        <span class="date">{{ blog.date|date:'jS F Y' }}</span><br>
+                        <span class="date">{{ blog.date|date:'jS F Y' }}</span>
                         <p>{{ blog.description|striptags|truncatechars:150 }}</p>
                         <a href="{% url 'blog:detail' blog.id %}" class="btn more-button">READ MORE<i class="material-icons left">read_more</i></a>
                     </span>
