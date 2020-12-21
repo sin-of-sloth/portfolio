@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.template import RequestContext
 from .models import Project
 
 def home(request):
@@ -8,3 +9,7 @@ def home(request):
         response.set_cookie('theme', 'light')
 
     return response
+
+
+def handler404(request, *args, **argv):
+    return render(request, 'portfolio/404.html')
