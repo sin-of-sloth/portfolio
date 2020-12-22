@@ -1,0 +1,14 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block portfolio-url %}{% url 'home' %}{% endblock %}
+{% block blog-url%}{% url 'blog:all_blogs' %}{% endblock %}
+
+{% block content %}
+<div class="container-fluid center" style="font-family: 'Special Elite';">
+    <span class="error" style="font-size: 300px; margin-bottom: auto;">404</span>
+    <h2 style="margin-top: auto;">THE PAGE YOU WERE LOOKING FOR DOES NOT EXIST</h2>
+    <h4>I find your lack of navigation skills disturbing.</h4>
+</div>
+{% endblock %}
