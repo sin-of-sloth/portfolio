@@ -25,14 +25,6 @@ superuser:
 	bash -c 'python3 manage.py createsuperuser'
 	@:
 
-.PHONY: admin
-admin:
-	@echo ''
-	@echo '$(RED)username: $(GREEN)admin'
-	@echo '$(RED)password: $(GREEN)thedarklord password'
-	@echo ''
-	@:
-
 .PHONY: static
 static:
 	python3 manage.py collectstatic
@@ -67,7 +59,6 @@ help:
 	@echo '$(RED)server:$(RESET) run the django server'
 	@echo '$(RED)migrate:$(RESET) run makemigrations and migrate'
 	@echo '$(RED)superuser:$(RESET) create a django admin (superuser)'
-	@echo '$(RED)admin:$(RESET) display $(BOLD)$(RED)my$(RESET) admin username and password'
 	@echo '$(RED)static:$(RESET) collect static files to root $(RED)(do not run on local! bad!)$(RESET)'
 	@echo '$(RED)push:$(RESET) commands to run to push to git'
 	@echo '$(RED)pull:$(RESET) commands to run to pull from git to production'
