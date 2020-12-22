@@ -9,7 +9,3 @@ def home(request):
         response.set_cookie('theme', 'light')
 
     return response
-
-
-def handler404(request, *args, **argv):
-    return render(request, 'portfolio/404.html')

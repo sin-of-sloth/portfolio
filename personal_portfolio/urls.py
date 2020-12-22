@@ -26,9 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('blog/', include('blog.urls')),
-    url(r'^$', views.handler404, name='404'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-handler404 = 'portfolio.views.handler404'
