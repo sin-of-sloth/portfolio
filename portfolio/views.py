@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect
-from django.template import RequestContext
+from django.shortcuts import render
 from .models import Project
 
 def home(request):
