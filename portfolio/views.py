@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Project
 
 def home(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('order')
     response = render(request, 'portfolio/home.html', {'projects':projects})
     if(request.COOKIES.get('theme', '') == ''):
         response.set_cookie('theme', 'light')
