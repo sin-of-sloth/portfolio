@@ -2,7 +2,7 @@
 
 portfolio app using Django3
 
-Ease of use
+## Ease of use
 
 ```bash
 make help
