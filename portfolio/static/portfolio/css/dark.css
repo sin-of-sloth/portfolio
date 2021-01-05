@@ -72,3 +72,37 @@ body {
 .back-button:hover {
     color: #d2eea8 !important;
 }
+
+.card-panel {
+    background-color: #1a1926 !important;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea.materialize-textarea:focus {
+    border-bottom: 1px solid #adff2f !important;
+    box-shadow: 0 1px 0 0 #adff2f !important;
+}
+
+input[type="text"]:focus + label, input[type="email"]:focus + label, textarea.materialize-textarea:focus + label {
+    color: #adff2f !important;
+}
+
+.input-field .prefix.active {
+    color: #adff2f !important;
+}
+
+[type="checkbox"]:checked + span:not(.lever)::before {
+    border-right: 4px solid #adff2f !important;
+    border-bottom: 4px solid #adff2f !important;
+}
+
+.input-field > label .active {
+    color: #9e9e9e !important;
+}
+
+input[type="text"], input[type="email"], textarea.materialize-textarea {
+    color: #ffffff !important;
+}
+
+.mail-btn {
+    background-color: #ff822f !important;
+}

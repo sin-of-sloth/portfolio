@@ -169,3 +169,7 @@ body {
     padding-left: 25px !important;
     position: fixed !important;
 }
+
+.helper-text {
+    color: #9e9e9e !important;
+}

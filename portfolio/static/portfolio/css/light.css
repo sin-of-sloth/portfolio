@@ -1,11 +1,6 @@
 body {
     background-color: #ffeaee;
     color: #000000;
-    /*background-image: url('../cherry_blossom.png');*/
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-position-x: right;
-    background-color: #ffeaee;
 }
 
 .brand-logo {
@@ -76,4 +71,38 @@ body {
 
 .back-button:hover {
     color: #a8b5eb !important;
+}
+
+.card-panel {
+    background-color: #ffeaee !important;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea.materialize-textarea:focus {
+    border-bottom: 1px solid #6b87ff !important;
+    box-shadow: 0 1px 0 0 #6b87ff !important;
+}
+
+input[type="text"]:focus + label, input[type="email"]:focus + label, textarea.materialize-textarea:focus + label {
+    color: #6b87ff !important;
+}
+
+.input-field .prefix.active {
+    color: #6b87ff !important;
+}
+
+[type="checkbox"]:checked + span:not(.lever)::before {
+    border-right: 4px solid #6b87ff !important;
+    border-bottom: 4px solid #6b87ff !important;
+}
+
+.input-field > label .active {
+    color: #9e9e9e !important;
+}
+
+input[type="text"], input[type="email"], textarea.materialize-textarea {
+    color: #000000 !important;
+}
+
+.mail-btn {
+    background-color: #2f9721 !important;
 }
