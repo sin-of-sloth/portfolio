@@ -136,5 +136,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_PORT = 587
+EMAIL_SUBJECT_PREFIX = "[Personal Portfolio] "
 EMAIL_HOST_USER = '<your-email-here>'
 EMAIL_HOST_PASSWORD = '<email-password>'

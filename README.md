@@ -14,4 +14,8 @@ make help
 
 ### Setting up your gmail account to receive messages
 
-Go [here](https://myaccount.google.com/security?pli=1) and Turn on access for Less secure apps
+- Fill in email address and password in settings
+- Go [here](https://myaccount.google.com/security?pli=1) and Turn on access for Less secure apps
+- If you're not able to send mails in production for gmail:
+  - Go to <https://myaccount.google.com/> and enable 2-Step verification
+  - Set up an App Password and use that for production
