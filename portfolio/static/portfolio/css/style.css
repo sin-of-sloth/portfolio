@@ -65,6 +65,10 @@ body {
     z-index: 2;
 }
 
+body, .nav-wrapper {
+    transition: background-color .5s ease-in-out !important;
+}
+
 .projects {
     padding: 0 50px 0 50px;
 }
