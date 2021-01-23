@@ -122,6 +122,11 @@ body, .nav-wrapper {
     overflow: hidden;
 }
 
+.card-title {
+    text-overflow: ellipsis !important;
+    overflow:hidden !important;
+}
+
 .collapsible-header {
     border-bottom: 0 !important;
     font-size: xx-large !important;
