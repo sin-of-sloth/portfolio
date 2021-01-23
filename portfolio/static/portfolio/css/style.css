@@ -103,6 +103,10 @@ body, .nav-wrapper {
     font-size: 100px !important;
 }
 
+.navbar-fixed {
+    z-index: 999 !important;
+}
+
 .navbar-logo {
     width: 30px !important;
     height: auto !important;

@@ -5,6 +5,8 @@
 {% block portfolio-url %}#!{% endblock %}
 {% block blog-url%}{% url 'blog:all_blogs' %}{% endblock %}
 {% block mail-url %}{% url 'mail' %}{% endblock %}
+{% block mobile-blog-url %}{% url 'blog:all_blogs' %}{% endblock %}
+{% block mobile-mail-url %}{% url 'mail' %}{% endblock %}
 
 {% block content %}
 
@@ -35,7 +37,7 @@
         </div>
         <div class="row">
             {% endif %}
-                    <div class="col s3">
+                    <div class="col l3 s6">
                         <div class="card transparent z-depth-3">
                             <div class="card-image">
                                 <img src="{{ project.image.url }}">

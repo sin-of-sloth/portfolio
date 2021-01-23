@@ -22,7 +22,7 @@
     <div class="navbar-fixed">
         <nav class="z-depth-3">
             <div class="nav-wrapper">
-                <ul id="nav-mobile" class="left">
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
                     <div class="switch">
                         <label>
                             <span class="theme-text ubuntu-font">&emsp;Light</span>
@@ -37,6 +37,7 @@
                       </div>
                 </ul>
                 <a href="{% block portfolio-url %}{% endblock %}" class="brand-logo center">Portfolio</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down valign-wrapper">
                     <li><a href="https://github.com/sin-of-sloth" target="_blank">Github&emsp;<img src="{% static 'portfolio/github.png' %}" alt="" class="circle navbar-logo"></a></li>
                     <li><a href="https://www.linkedin.com/in/arjunlal0709" target="_blank">LinkedIn&emsp;<img src="{% static 'portfolio/linkedin.png' %}" alt="" class="circle navbar-logo"></a></li>
@@ -46,6 +47,28 @@
                 </ul>
             </div>
         </nav>
+
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="https://github.com/sin-of-sloth" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/arjunlal0709" target="_blank">LinkedIn</a></li>
+            <li><a href="{% static 'portfolio/resume.pdf' %}" target="_blank">Resume</a></li>
+            <li><a href="{% block mobile-blog-url %}{% endblock %}" class="bloglink"><span class="blog">Blog</span></a></li>
+            <li><a href="{% block mobile-mail-url %}{% endblock %}" class="bloglink"><span class="blog">Contact Me</span></a></li>
+            <li>
+                <div class="switch">
+                    <label>&emsp;&nbsp;
+                        <span class="theme-text ubuntu-font">&emsp;Light</span>
+                        {% ifequal request.COOKIES.theme "dark" %}
+                            <input type="checkbox" id="theme-toggle" onclick="toggler()" checked>
+                        {% else %}
+                            <input type="checkbox" id="theme-toggle" onclick="toggler()" unchecked>
+                        {% endifequal %}
+                        <span class="lever"></span>
+                        <span class="theme-text ubuntu-font">Dark</span>
+                    </label>
+                  </div>
+            </li>
+        </ul>
     </div>   
     
     {% ifequal request.COOKIES.theme "dark" %}

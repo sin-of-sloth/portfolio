@@ -106,3 +106,11 @@ input[type="text"], input[type="email"], textarea.materialize-textarea {
 .mail-btn {
     background-color: #2f9721 !important;
 }
+
+.sidenav {
+    background-color: #ffb7c5 !important;
+}
+
+.sidenav li a {
+    color: #6b87ff !important;
+}

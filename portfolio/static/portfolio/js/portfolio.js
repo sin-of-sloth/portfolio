@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Parallax.init(elems, {});
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+});
+
 function toggler() {
     if (document.getElementById('theme').className == "dark") {
         document.getElementById('theme').href = light_theme;
